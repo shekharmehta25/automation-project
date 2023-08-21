@@ -1,0 +1,11 @@
+---
+- name: Playbook for Package Management and Patching
+  hosts: linux
+  become: true
+  
+  roles:
+    - role: /Users/shekharmehta/Documents/College/Automation/automation-project/ansible/roles/datadisk-n01580922
+    - role: /Users/shekharmehta/Documents/College/Automation/automation-project/ansible/roles/profile-n01580922
+    - role: /Users/shekharmehta/Documents/College/Automation/automation-project/ansible/roles/user-n01580922
+    - role: /Users/shekharmehta/Documents/College/Automation/automation-project/ansible/roles/webserver-n01580922
+

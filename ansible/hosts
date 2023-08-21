@@ -1,0 +1,24 @@
+[linux]
+n01580922-linux1.centralindia.cloudapp.azure.com
+n01580922-linux2.centralindia.cloudapp.azure.com
+n01580922-linux3.centralindia.cloudapp.azure.com
+
+[windows]
+n0922-win1.centralindia.cloudapp.azure.com
+
+[os:children]
+linux
+windows
+
+[linux:vars]
+ansible_user=n01580922-shekharmehta
+ansible_ssh_private_key_file="~/.ssh/id_rsa"
+ansible_ssh_common_args='-o StrictHostKeyChecking=False'
+
+[windows:vars]
+ansible_user=n01580922-shekhar
+ansible_password="~/.ssh/id_rsa"
+ansible_connection=winrm
+ansible_port=5985
+ansible_winrm_transport=ntlm
+ansible_winrm_server_cert_validation=ignore
